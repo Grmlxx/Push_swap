@@ -6,7 +6,7 @@
 /*   By: alamaoui <alamaoui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 23:53:08 by alamaoui          #+#    #+#             */
-/*   Updated: 2024/05/09 15:18:35 by alamaoui         ###   ########.fr       */
+/*   Updated: 2024/05/09 18:10:25 by alamaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,16 +60,9 @@ void	reader(t_node **stack_a, t_node **stack_b)
 		line = get_next_line(0);
 	}
 	free(line);
-	if (ft_lstsize(*stack_b) != 0)
-	{
-		free_stack(*stack_b);
-		free_stack(*stack_a);
-		write(1, "KO\n", 3);
-		exit(1);
-	}
-	if (is_sorted(*stack_a) == 1)
+	if (is_sorted(*stack_a) == 1 && ft_lstsize(*stack_b) == 0)
 		write(1, "OK\n", 3);
-	else if (is_sorted(*stack_a) == 0)
+	else
 		write(1, "KO\n", 3);
 }
 
@@ -90,4 +83,5 @@ int	main(int ac, char **av)
 	check_duplicates(stack_a);
 	reader(&stack_a, &stack_b);
 	free_stack(stack_a);
+	free_stack(stack_b);
 }

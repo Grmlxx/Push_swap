@@ -6,7 +6,7 @@
 /*   By: alamaoui <alamaoui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 18:01:33 by alamaoui          #+#    #+#             */
-/*   Updated: 2024/05/09 10:04:03 by alamaoui         ###   ########.fr       */
+/*   Updated: 2024/05/09 18:08:12 by alamaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,11 @@
 
 void	ss(t_node *stack_a, t_node *stack_b, int flag)
 {
-	sa(stack_a, 0);
-	sb(stack_b, 0);
+	if ((stack_a && stack_a->next) && (stack_b && stack_b->next))
+	{
+		sa(stack_a, 0);
+		sb(stack_b, 0);
+	}
 	if (flag == 1)
 		write(1, "ss\n", 3);
 }

@@ -6,7 +6,7 @@
 /*   By: alamaoui <alamaoui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 18:01:30 by alamaoui          #+#    #+#             */
-/*   Updated: 2024/05/09 10:03:29 by alamaoui         ###   ########.fr       */
+/*   Updated: 2024/05/09 18:07:29 by alamaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,11 @@
 
 void	rrr(t_node *stack_a, t_node *stack_b, int flag)
 {
-	rra(&stack_a, 0);
-	rrb(&stack_b, 0);
+	if ((stack_a && stack_a->next) && (stack_b && stack_b->next))
+	{
+		rra(&stack_a, 0);
+		rrb(&stack_b, 0);
+	}
 	if (flag == 1)
 		write(1, "rrr\n", 4);
 }
