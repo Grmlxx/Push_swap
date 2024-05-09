@@ -6,7 +6,7 @@
 /*   By: alamaoui <alamaoui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 23:53:08 by alamaoui          #+#    #+#             */
-/*   Updated: 2024/05/09 18:10:25 by alamaoui         ###   ########.fr       */
+/*   Updated: 2024/05/09 18:53:56 by alamaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,11 @@ void	reader(t_node **stack_a, t_node **stack_b)
 		line = get_next_line(0);
 	}
 	free(line);
+	if (ft_lstsize(*stack_b) != 0)
+	{
+		write(1, "KO\n", 3);
+		return ;
+	}
 	if (is_sorted(*stack_a) == 1 && ft_lstsize(*stack_b) == 0)
 		write(1, "OK\n", 3);
 	else
