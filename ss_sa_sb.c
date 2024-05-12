@@ -6,7 +6,7 @@
 /*   By: alamaoui <alamaoui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 18:01:33 by alamaoui          #+#    #+#             */
-/*   Updated: 2024/05/09 18:08:12 by alamaoui         ###   ########.fr       */
+/*   Updated: 2024/05/12 23:16:11 by alamaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,37 @@ void	sb(t_node *stack_b, int flag)
 	}
 	if (flag == 1)
 		write(1, "sb\n", 3);
+}
+
+int	smallest(t_node *stack_a)
+{
+	t_node	*current;
+	int		smallest;
+
+	current = stack_a;
+	smallest = current->value;
+	while (current != NULL)
+	{
+		if (current->value < smallest)
+			smallest = current->value;
+		current = current->next;
+	}
+	return (smallest);
+}
+
+int	smallest_index(t_node *stack_a, int small)
+{
+	t_node	*current;
+	int		index;
+
+	current = stack_a;
+	index = 0;
+	while (current != NULL)
+	{
+		if (small == current->value)
+			return (index);
+		index++;
+		current = current->next;
+	}
+	return (index);
 }

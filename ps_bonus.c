@@ -6,7 +6,7 @@
 /*   By: alamaoui <alamaoui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 23:53:08 by alamaoui          #+#    #+#             */
-/*   Updated: 2024/05/09 18:53:56 by alamaoui         ###   ########.fr       */
+/*   Updated: 2024/05/09 19:28:40 by alamaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	reader(t_node **stack_a, t_node **stack_b)
 	char	*line;
 
 	line = get_next_line(0);
-	while (line && line[0] != '\0')
+	while (line)
 	{
 		checker(line, stack_a, stack_b);
 		free(line);
