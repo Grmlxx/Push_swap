@@ -6,7 +6,7 @@
 /*   By: alamaoui <alamaoui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 18:07:09 by alamaoui          #+#    #+#             */
-/*   Updated: 2024/05/09 12:56:01 by alamaoui         ###   ########.fr       */
+/*   Updated: 2024/05/13 15:05:02 by alamaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,7 @@ typedef struct s_node
 	int				index;
 }					t_node;
 
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 10
-# endif
+# define BUFFER_SIZE 1
 
 void				bye_bye(void);
 t_node				*create_node(int value);

@@ -38,12 +38,10 @@ BOBJS = $(BSRCS:.c=.o)
 
 all: $(NAME)
 
-
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
 
 bonus: $(NAME_BONUS)
-
 
 $(NAME_BONUS): $(BOBJS)
 	$(CC) $(CFLAGS) -o $(NAME_BONUS) $(BOBJS)
