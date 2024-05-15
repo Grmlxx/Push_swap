@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   header.h                                           :+:      :+:    :+:   */
+/*   header_bonus.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alamaoui <alamaoui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/30 18:07:09 by alamaoui          #+#    #+#             */
-/*   Updated: 2024/05/15 17:19:51 by alamaoui         ###   ########.fr       */
+/*   Created: 2024/05/15 17:17:03 by alamaoui          #+#    #+#             */
+/*   Updated: 2024/05/15 17:22:50 by alamaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HEADER_H
-# define HEADER_H
+#ifndef HEADER_BONUS_H
+# define HEADER_BONUS_H
 
 # include <stdio.h>
 # include <stdlib.h>
@@ -52,11 +52,6 @@ void				rr(t_node *stack_a, t_node *stack_b, int flag);
 void				rra(t_node **stack_a, int flag);
 void				rrb(t_node **stack_b, int flag);
 void				rrr(t_node *stack_a, t_node *stack_b, int flag);
-void				sort_2(t_node *stack_a);
-void				sort_3(t_node **stack_a);
-void				sort_4(t_node **stack_a, t_node **stack_b);
-void				sort_5(t_node **stack_a, t_node **stack_b);
-void				sort_more_than_5(t_node **stack_a, t_node **stack_b);
 int					is_sorted(t_node *stack_a);
 int					ft_lstsize(t_node *lst);
 char				*args_joiner(char **av);
@@ -66,5 +61,8 @@ int					smallest_index(t_node *stack_a, int small);
 void				push_to_b(t_node **stack_a, t_node **stack_b, int range);
 void				push_to_a(t_node **stack_a, t_node **stack_b);
 void				sorter(t_node **stack_a, t_node **stack_b);
+char				*get_next_line(int fd);
+char				*ft_strchr(char *s, int c);
+int					ft_strcmp(char *s1, char *s2);
 
 #endif

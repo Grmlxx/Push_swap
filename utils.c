@@ -6,7 +6,7 @@
 /*   By: alamaoui <alamaoui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 20:53:20 by alamaoui          #+#    #+#             */
-/*   Updated: 2024/05/12 23:16:07 by alamaoui         ###   ########.fr       */
+/*   Updated: 2024/05/15 17:16:18 by alamaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ char	*args_joiner(char **av)
 	args = NULL;
 	while (av[i])
 	{
+		y = 0;
 		while (av[i][y] && av[i][y] == ' ')
 			y++;
 		if (av[i][y] == '\0')
@@ -44,7 +45,7 @@ void	is_num_oflow(long num, t_node *stack_a, char *args, char **tokens)
 	}
 }
 
-static void	kharjo(char *args, char **tokens, t_node *stack_a)
+static void	fuck_off(char *args, char **tokens, t_node *stack_a)
 {
 	free_memory(args, tokens);
 	free_stack(stack_a);
@@ -78,7 +79,7 @@ t_node	*read_data(t_node *stack_a, char **av, char **tokens, char *args)
 	{
 		if (((tokens[x][0] == '-' || tokens[x][0] == '+')
 				&& tokens[x][1] == '\0') || tokens[x][0] == '\t')
-			kharjo(args, tokens, stack_a);
+			fuck_off(args, tokens, stack_a);
 		num = ft_atoi(tokens[x], num);
 		is_num_oflow(num, stack_a, args, tokens);
 		new_list = create_node(num);

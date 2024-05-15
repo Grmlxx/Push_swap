@@ -6,11 +6,11 @@
 /*   By: alamaoui <alamaoui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 15:14:08 by alamaoui          #+#    #+#             */
-/*   Updated: 2024/05/09 12:25:03 by alamaoui         ###   ########.fr       */
+/*   Updated: 2024/05/15 17:23:44 by alamaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
+#include "header_bonus.h"
 
 char	*ft_strchr(char *s, int c)
 {
